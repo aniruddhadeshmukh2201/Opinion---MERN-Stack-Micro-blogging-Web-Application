@@ -37,15 +37,15 @@ app.get("/api/messages", loginRequired, async function(req, res, next) {
         return next(err);
     }
 });
-app.get('/register',function(req,res){
-    res.sendFile(path.join(__dirname+'/register.html'));
-    //__dirname : It will resolve to your project folder.
-  });
+// app.get('/register',function(req,res){
+//     res.sendFile(path.join(__dirname+'/register.html'));
+//     //__dirname : It will resolve to your project folder.
+//   });
 
-  app.get('/login',function(req,res){
-    res.sendFile(path.join(__dirname+'/login.html'));
-    //__dirname : It will resolve to your project folder.
-  });
+//   app.get('/login',function(req,res){
+//     res.sendFile(path.join(__dirname+'/login.html'));
+//     //__dirname : It will resolve to your project folder.
+//   });
 //Error handling
 app.use(function(res, req, next) {
     let err = new Error("Not Found");
